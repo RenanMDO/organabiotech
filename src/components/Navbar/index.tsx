@@ -1,4 +1,4 @@
-import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLinks, NavLogo, NavMenu } from './NavbarElements'
+import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLinks, NavLinkR, NavLogo, NavMenu, ImgLogo } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 
@@ -11,7 +11,7 @@ export function Navbar({ toggle }) {
         <NavbarContainer>
           <Link href='/' passHref>
             <NavLogo>
-              Organa
+              <ImgLogo src='/images/logo.svg' />
             </NavLogo>
           </Link>
           <MobileIcon onClick={toggle}>
@@ -19,29 +19,36 @@ export function Navbar({ toggle }) {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <Link href='#about' passHref>
-                <NavLinks href='#about'>Sobre</NavLinks>
-              </Link>
+              <NavLinks to='about'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}>Sobre</NavLinks>
             </NavItem>
             <NavItem>
-              <Link href='#solution' passHref>
-                <NavLinks href='#solution'>Soluções</NavLinks>
-              </Link>
+              <NavLinks to='services' smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}>Soluções</NavLinks>
             </NavItem>
             <NavItem>
               <Link href='/blog' passHref>
-                <NavLinks href='/blog'>Blog</NavLinks>
+                <NavLinkR href='/blog'>Blog</NavLinkR>
               </Link>
             </NavItem>
             <NavItem>
               <Link href='/store' passHref>
-                <NavLinks href='/store'>Loja</NavLinks>
+                <NavLinkR href='/store'>Loja</NavLinkR>
               </Link>
             </NavItem>
             <NavItem>
-              <Link href='#contact' passHref>
-                <NavLinks href='#contact'>Contato</NavLinks>
-              </Link>
+              <NavLinks to='contact' smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}>Contato</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

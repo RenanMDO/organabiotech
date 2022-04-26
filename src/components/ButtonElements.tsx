@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 interface ButtonProps {
   primary?: boolean;
@@ -8,7 +9,7 @@ interface ButtonProps {
 }
 
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled(Link) <ButtonProps>`
   border-radius: 50px;
   background: ${({ primary }) => (primary ? '#25C67E' : '#010606')
   };

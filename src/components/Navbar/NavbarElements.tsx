@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { Link as LinkS } from 'react-scroll'
 
 
 export const Nav = styled.nav`
@@ -73,7 +74,20 @@ export const NavItem = styled.li`
 `
 
 
-export const NavLinks = styled.a`
+export const NavLinks = styled(LinkS)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #01bf71;
+  }
+`
+export const NavLinkR = styled.a`
   color: #fff;
   display: flex;
   align-items: center;
@@ -112,6 +126,9 @@ export const NavBtnLink = styled.a`
       background: #fff;
       color: #010606;
     }
+`
+export const ImgLogo = styled.img`
+  height: 50px;
 `
 
 

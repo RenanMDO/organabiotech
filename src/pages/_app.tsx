@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 import { Sidebar } from '../components/Sidebar'
 import GlobalStyle from '../Styles/global'
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
         <Component {...pageProps} />
+        <Footer />
         <GlobalStyle />
       </ThemeProvider>
     </>

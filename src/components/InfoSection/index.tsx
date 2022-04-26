@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import { Button } from '../ButtonElements'
 import { InfoContainer, Infowrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './InfoElements'
 
@@ -17,6 +17,11 @@ export function InfoSection({ lightBg, id, imgStart, topLine, lightText, darkTex
                   <Button
                     primary={primary}
                     dark={dark}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-80}
+                    to="contact"
                   >{buttonLabel}</Button>
                 </BtnWrap>
               </TextWrapper>

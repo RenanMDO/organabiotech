@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CloseIcon, Icon, SidebarContainer, SidebarLink, SidebarMenu, SidebarRoute, Sidebarwrapper, SideBtnWrap } from "./SidebarElements";
+import { CloseIcon, Icon, SidebarContainer, SidebarLink, SidebarLinkR, SidebarMenu, SidebarRoute, Sidebarwrapper, SideBtnWrap } from "./SidebarElements";
 
 
 export function Sidebar({ isOpen, toggle }) {
@@ -10,31 +10,34 @@ export function Sidebar({ isOpen, toggle }) {
       </Icon>
       <Sidebarwrapper>
         <SidebarMenu>
-          <Link href='#about' passHref>
-            <SidebarLink>
-              Sobre
-            </SidebarLink>
-          </Link>
-          <Link href='#solutions' passHref>
-            <SidebarLink onClick={toggle}>
-              Soluções
-            </SidebarLink>
-          </Link>
+          <SidebarLink to="about" onClick={toggle} smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}>
+            Sobre
+          </SidebarLink>
+          <SidebarLink to="services" onClick={toggle} smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}>
+            Soluções
+          </SidebarLink>
           <Link href='/blog' passHref>
-            <SidebarLink onClick={toggle}>
+            <SidebarLinkR onClick={toggle}>
               Blog
-            </SidebarLink>
+            </SidebarLinkR>
           </Link>
           <Link href='/store' passHref>
-            <SidebarLink onClick={toggle}>
+            <SidebarLinkR onClick={toggle}>
               Loja
-            </SidebarLink>
+            </SidebarLinkR>
           </Link>
-          <Link href='#contact' passHref>
-            <SidebarLink onClick={toggle}>
-              Contato
-            </SidebarLink>
-          </Link>
+          <SidebarLink to="contact" onClick={toggle} smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}>
+            Contato
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <Link href='/login' passHref>

@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='trues' />
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap" rel="stylesheet" />
           <meta
             name="description"
             content="Encontramos soluções ambientais para a indústria e comercio, com princípio norteador de impulsionar a Economia Circular, por meio do tratamento sustentável dos resíduos orgânicos."
