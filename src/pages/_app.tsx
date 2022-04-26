@@ -1,26 +1,26 @@
 import { AppProps } from 'next/app'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { useState } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Navbar } from '../components/Navbar'
+import { Sidebar } from '../components/Sidebar'
+import GlobalStyle from '../Styles/global'
+import theme from '../Styles/theme'
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
         <Component {...pageProps} />
+        <GlobalStyle />
       </ThemeProvider>
     </>
   )

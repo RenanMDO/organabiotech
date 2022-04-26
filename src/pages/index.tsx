@@ -1,10 +1,15 @@
 import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import { HeroSection } from '../components/HeroSection'
+import { InfoSection } from '../components/InfoSection'
+import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data'
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <>
+      <HeroSection />
+      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjThree} />
+    </>
+  )
 }
