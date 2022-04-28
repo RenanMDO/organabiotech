@@ -10,18 +10,22 @@ export function Sidebar({ isOpen, toggle }) {
       </Icon>
       <Sidebarwrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle} smooth={true}
-            duration={500}
-            spy={true}
-            offset={-80}>
-            Sobre
-          </SidebarLink>
-          <SidebarLink to="services" onClick={toggle} smooth={true}
-            duration={500}
-            spy={true}
-            offset={-80}>
-            Soluções
-          </SidebarLink>
+          <Link href='/#about' passHref>
+            <SidebarLink to="about" onClick={toggle} smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}>
+              Sobre
+            </SidebarLink>
+          </Link>
+          <Link href='/#services' passHref>
+            <SidebarLink to="services" onClick={toggle} smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}>
+              Soluções
+            </SidebarLink>
+          </Link>
           <Link href='/blog' passHref>
             <SidebarLinkR onClick={toggle}>
               Blog
@@ -32,12 +36,14 @@ export function Sidebar({ isOpen, toggle }) {
               Loja
             </SidebarLinkR>
           </Link>
-          <SidebarLink to="contact" onClick={toggle} smooth={true}
-            duration={500}
-            spy={true}
-            offset={-80}>
-            Contato
-          </SidebarLink>
+          <Link href='/#contact' passHref>
+            <SidebarLink to="contact" onClick={toggle} smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}>
+              Contato
+            </SidebarLink>
+          </Link>
         </SidebarMenu>
         <SideBtnWrap>
           <Link href='/login' passHref>

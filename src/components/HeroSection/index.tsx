@@ -15,7 +15,7 @@ export function HeroSection() {
       </HeroBg>
       <HeroContent>
         <HeroH1>Soluções ambientais</HeroH1>
-        <HeroP>Soluções para os resíduos orgânicos: <p />
+        <HeroP>Soluções para os resíduos orgânicos:
         </HeroP>
         <HeroBtnWrapper>
           <Button to="contact" onMouseEnter={onHover} onMouseLeave={onHover} primary={true} dark={true} smooth={true}

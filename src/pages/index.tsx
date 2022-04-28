@@ -1,13 +1,17 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import { Contact } from '../components/Contact'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data'
-import { Services } from '../components/Services'
+import { Services } from '../components/solutions'
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Organa Biotech</title>
+      </Head>
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />

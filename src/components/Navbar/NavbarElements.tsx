@@ -1,10 +1,13 @@
-import Link from 'next/link'
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
 
+type NavProps = {
+  scrollNav: boolean;
+}
 
-export const Nav = styled.nav`
-  background: #000;
+
+export const Nav = styled.nav<NavProps>`
+  background: ${({ scrollNav }) => (scrollNav ? '#000' : '#3b39399f')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -83,9 +86,6 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #01bf71;
-  }
 `
 export const NavLinkR = styled.a`
   color: #fff;

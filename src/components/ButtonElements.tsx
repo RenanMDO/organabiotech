@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
-interface ButtonProps {
+type ButtonProps = {
   primary?: boolean;
   big?: boolean;
   dark?: boolean;
