@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { BlogMain, BlogDiv, BlogA, BlogTime, BlogStrong, BlogP } from "./PostElements"
+import { BlogMain, BlogDiv, BlogA, BlogTime, BlogStrong } from "../../components/PostElements"
 import { getPrismicClient } from '../../services/prismics';
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'

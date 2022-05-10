@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Container, Form, FormButton, FormContent, FormH1, FormInput, FormLabel, FormWrap, Text } from "./SigninElements";
+import { Container, Form, FormButton, FormContent, FormH1, FormInput, FormLabel, FormWrap, Text } from "../../components/SigninElements";
 
 export default function Signin() {
   return (
