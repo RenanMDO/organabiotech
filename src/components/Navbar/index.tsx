@@ -30,7 +30,7 @@ export function Navbar({ toggle }) {
         <NavbarContainer>
           <Link href='/' passHref>
             <NavLogo>
-              <ImgLogo src='/images/logo.svg' />
+              <ImgLogo src='/images/Logo.svg' />
             </NavLogo>
           </Link>
           <MobileIcon onClick={toggle}>
