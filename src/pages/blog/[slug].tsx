@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { RichText } from "prismic-dom";
 import { getPrismicClient } from "../../services/prismics";
-import { PostMain, PostH1, TimePost, PostDiv, ArticlePost } from './ContentElement'
+import { PostMain, PostH1, TimePost, PostDiv, ArticlePost } from '../../components/ContentElement'
 
 interface PostsProps {
   post: {
