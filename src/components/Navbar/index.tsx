@@ -28,9 +28,11 @@ export function Navbar({ toggle }) {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo href='/'>
-            <ImgLogo src='/images/logo.svg' />
-          </NavLogo>
+          <Link href='/' passHref>
+            <NavLogo>
+              <ImgLogo src='/images/logo.svg' />
+            </NavLogo>
+          </Link>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
