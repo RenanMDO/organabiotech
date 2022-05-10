@@ -5,6 +5,8 @@ import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 import { GetStaticProps } from 'next';
 import Link from "next/link";
+import { Pagination } from "../../components/Pagination";
+import { useState } from "react";
 
 type Post = {
   slug: string;
@@ -14,10 +16,13 @@ type Post = {
 }
 
 interface PostsProps {
-  posts: Post[]
+  posts: Post[];
+  total: number;
 }
 
-export default function Blog({ posts }: PostsProps) {
+export default function Blog({ posts, total }: PostsProps) {
+  const [page, setPage] = useState(1);
+
   return (
     <>
       <Head>
@@ -39,6 +44,7 @@ export default function Blog({ posts }: PostsProps) {
           ))}
         </BlogDiv>
       </BlogMain>
+      <Pagination totalCountOfRegisters={total} currentPage={page} onPageChange={setPage} />
     </>
   );
 }
@@ -47,11 +53,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient()
 
   const response = await prismic.query([
-    Prismic.predicates.at('document.type', 'post')
-  ], {
-    fetch: ['title', 'content'],
-    pageSize: 100,
-  })
+    Prismic.predicates.at('document.type', 'post')],
+    {
+      orderings: '[document.first_publication_date desc]',
+      fetch: ['title', 'content'],
+      page: 1,
+      pageSize: 1,
+    })
 
   const posts = response.results.map(post => {
     return {
@@ -67,8 +75,19 @@ export const getStaticProps: GetStaticProps = async () => {
   });
 
 
+  const total = response.total_results_size;
+  const pageStart = (Number(response.page) - 1) * Number(response.results_per_page);
+  const pageEnd = pageStart + Number(response.results_per_page);
+  const postsPage = posts.slice(pageStart, pageEnd)
+
+
 
   return {
-    props: { posts }
+    props: {
+      posts,
+      total
+    },
+    revalidate: 86400,
+
   }
 }

@@ -42,6 +42,8 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="manifest" href="/manifest.json" />
+          <meta name="adopt-website-id" content="3bc30132-1ec9-4776-8fdf-7eccd903b606" />
+          <script src="//tag.goadopt.io/injector.js?website_code=3bc30132-1ec9-4776-8fdf-7eccd903b606" className="adopt-injector"></script>
         </Head>
         <body>
           <Main />
