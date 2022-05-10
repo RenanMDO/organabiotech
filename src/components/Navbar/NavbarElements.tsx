@@ -129,6 +129,7 @@ export const NavBtnLink = styled.a`
 `
 export const ImgLogo = styled.img`
   height: 50px;
+  width: auto;
 `
 
 
