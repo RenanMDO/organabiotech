@@ -5,6 +5,7 @@ import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data'
 import { Services } from '../components/solutions'
+import { VideoSection } from '../components/VideoSection'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+      <VideoSection />
       <Services />
       <Contact />
     </>
