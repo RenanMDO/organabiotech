@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styled from 'styled-components'
 import { Contact } from '../components/Contact'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
