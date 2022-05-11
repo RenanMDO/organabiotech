@@ -7,7 +7,7 @@ export function Services() {
       <ServicesH1>Soluções</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>
-          <ServicesIcon src='/images/svg-5.svg' />
+          <ServicesIcon src='/images/time.svg' />
           <ServicesH2>Compostagem Acelerada</ServicesH2>
           <ServicesP>Compostagem in company</ServicesP>
         </ServicesCard>
