@@ -28,7 +28,7 @@ export const InfoContainer = styled.div<InfoContainerProps>`
 export const Infowrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: auto;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -49,15 +49,25 @@ export const InfoRow = styled.div<InfoRowProps>`
 `
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 0 15px;
   grid-area: col1;
+  @media screen and (max-width: 480px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `
 
 export const Column2 = styled.div`
-  margin-bottom: 15px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 0 15px;
   grid-area: col2;
+  @media screen and (max-width: 480px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -102,9 +112,12 @@ export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
   margin-bottom: 5px;
+ 
 `
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+  
+
 `
