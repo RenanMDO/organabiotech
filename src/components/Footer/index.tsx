@@ -3,6 +3,8 @@ import { animateScroll as scroll } from 'react-scroll'
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinkA, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink, FooterLinkS } from './FooterElements'
 import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '../../assets/images/organa_logo_branco.png'
 
 export function Footer() {
 
@@ -66,7 +68,7 @@ export function Footer() {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo onClick={toggleHome}>
-              Organa Biotech
+              <Image src={Logo} width="200" height="66" />
             </SocialLogo>
             <WebsiteRights>Organa Biotech © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>

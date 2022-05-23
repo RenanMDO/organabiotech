@@ -3,7 +3,7 @@ import { BlogMain, BlogDiv, BlogA, BlogTime, BlogStrong } from "../../components
 import { getPrismicClient } from '../../services/prismics';
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetServerSideProps } from 'next';
 import Link from "next/link";
 import { Pagination } from "../../components/Pagination";
 import { useState } from "react";
@@ -17,10 +17,11 @@ type Post = {
 
 interface PostsProps {
   posts: Post[];
-  total: number;
+  totalPages: []
+  pageSize: number | string
 }
 
-export default function Blog({ posts, total }: PostsProps) {
+export default function Blog({ posts, totalPages, pageSize }: PostsProps) {
   const [page, setPage] = useState(1);
 
   return (
@@ -44,21 +45,24 @@ export default function Blog({ posts, total }: PostsProps) {
           ))}
         </BlogDiv>
       </BlogMain>
-      <Pagination totalCountOfRegisters={total} currentPage={page} onPageChange={setPage} />
+      <Pagination totalCountOfRegisters={100} currentPage={page} onPageChange={setPage} />
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const prismic = getPrismicClient()
+  const { page = '1', size = '2' } = query
+  const pg = Number(page)
+  const sz = Number(size)
 
   const response = await prismic.query([
     Prismic.predicates.at('document.type', 'post')],
     {
       orderings: '[document.first_publication_date desc]',
       fetch: ['title', 'content'],
-      page: 1,
-      pageSize: 100,
+      page: pg,
+      pageSize: sz,
     })
 
   const posts = response.results.map(post => {
@@ -74,20 +78,14 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-
-  const total = response.total_results_size;
-  const pageStart = (Number(response.page) - 1) * Number(response.results_per_page);
-  const pageEnd = pageStart + Number(response.results_per_page);
-  const postsPage = posts.slice(pageStart, pageEnd)
-
-
+  const totalPages = Array.from({ length: response.total_pages })
+    .map((_, index) => index + 1)
 
   return {
     props: {
       posts,
-      total
-    },
-    revalidate: 86400,
-
+      totalPages,
+      pageSize: sz
+    }
   }
 }

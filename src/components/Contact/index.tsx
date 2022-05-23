@@ -27,9 +27,9 @@ export function Contact() {
                 <FaMapPin className='icon' />
                 Joinville, Santa Catarina BR
               </ContactLink>
-              <ContactLink href="mailto:contato@organabiotech.com.br" target='_blank'>
+              <ContactLink href="mailto:guilherme@organabiotech.com.br" target='_blank'>
                 <FaMailBulk className='icon' />
-                contato@organabiotech.com.br
+                guilherme@organabiotech.com.br
               </ContactLink>
             </ContactLinks>
           </Column2>
