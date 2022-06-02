@@ -1,11 +1,10 @@
 import Head from "next/head";
-import { BlogMain, BlogDiv, BlogA, BlogTime, BlogStrong } from "../../components/PostElements"
+import { BlogMain, BlogDiv, BlogA, BlogTime, BlogStrong, BlogUl, BlogLi } from "../../components/PostElements"
 import { getPrismicClient } from '../../services/prismics';
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 import { GetStaticProps, GetServerSideProps } from 'next';
 import Link from "next/link";
-import { Pagination } from "../../components/Pagination";
 import { useState } from "react";
 
 type Post = {
@@ -17,12 +16,14 @@ type Post = {
 
 interface PostsProps {
   posts: Post[];
-  totalPages: []
-  pageSize: number | string
+  totalPages: [];
+  pageSize: number;
+  page: number;
+  totalPosts: number;
 }
 
-export default function Blog({ posts, totalPages, pageSize }: PostsProps) {
-  const [page, setPage] = useState(1);
+export default function Blog({ posts, totalPages, pageSize, page, totalPosts }: PostsProps) {
+  const [onPage, setOnPage] = useState(page);
 
   return (
     <>
@@ -45,14 +46,22 @@ export default function Blog({ posts, totalPages, pageSize }: PostsProps) {
           ))}
         </BlogDiv>
       </BlogMain>
-      <Pagination totalCountOfRegisters={100} currentPage={page} onPageChange={setPage} />
+      <BlogUl>
+        {totalPages.map(page => (
+          <Link href={`/blog?page=${page}&size=${pageSize}`}>
+            <BlogLi key={page} >
+              <BlogA>{page}</BlogA>
+            </BlogLi>
+          </Link>
+        ))}
+      </BlogUl>
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const prismic = getPrismicClient()
-  const { page = '1', size = '2' } = query
+  const { page = '1', size = '5' } = query
   const pg = Number(page)
   const sz = Number(size)
 
@@ -81,11 +90,16 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const totalPages = Array.from({ length: response.total_pages })
     .map((_, index) => index + 1)
 
+  const totalPosts = response.total_results_size
+
+  console.log(totalPosts)
+
   return {
     props: {
       posts,
       totalPages,
-      pageSize: sz
+      pageSize: sz,
+      totalPosts
     }
   }
 }

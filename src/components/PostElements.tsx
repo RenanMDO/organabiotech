@@ -44,3 +44,25 @@ export const BlogP = styled.p`
   margin-top: 0.5rem;
   line-height: 1.625rem;
 `
+
+export const BlogUl = styled.ul`
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+
+`
+export const BlogLi = styled.div`
+  color: black;
+  padding: 1rem;
+  margin: 0 3rem;
+  text-decoration: none;
+  background-color: #60b75d;
+  border: none;
+  border-radius: 1.5rem;
+  list-style-type: none;
+  cursor: pointer;
+   :hover {
+    background-color: #60b75d;
+    color: #fff;
+    }
+`
