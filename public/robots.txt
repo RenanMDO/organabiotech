@@ -1,3 +1,14 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Disallow: /signin
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.organabiotech.com.br
+
+# Sitemaps
+Sitemap: https://www.organabiotech.com.br/sitemap.xml
+Sitemap: https://www.organabiotech.com.br/server-sitemap.xml
