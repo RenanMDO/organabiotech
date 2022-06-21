@@ -18,7 +18,7 @@ export function Services() {
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src='/images/svg-2.svg' />
-          <ServicesH2>Analise</ServicesH2>
+          <ServicesH2>Análise</ServicesH2>
           <ServicesP>Identificação dos custos atuais com destinação</ServicesP>
         </ServicesCard>
         <ServicesCard>
