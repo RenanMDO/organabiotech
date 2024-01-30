@@ -9,7 +9,7 @@ import GlobalStyle from '../Styles/global'
 import theme from '../Styles/theme'
 import * as gtag from '../lib/gtag'
 import Script from 'next/script'
-
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,6 +51,8 @@ export default function App({ Component, pageProps }: AppProps) {
           `,
         }}
       />
+      <Component {...pageProps} />
+      <GoogleTagManager gtmId="GTM-WJKD3D2G" />
       <ThemeProvider theme={theme}>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
