@@ -51,12 +51,11 @@ export default function App({ Component, pageProps }: AppProps) {
           `,
         }}
       />
-      <Component {...pageProps} />
-      <GoogleTagManager gtmId="GTM-WJKD3D2G" />
       <ThemeProvider theme={theme}>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
         <Component {...pageProps} />
+        <GoogleTagManager gtmId="GTM-WJKD3D2G" />
         <Footer />
         <GlobalStyle />
       </ThemeProvider>
