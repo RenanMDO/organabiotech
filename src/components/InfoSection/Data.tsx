@@ -14,8 +14,8 @@ export const homeObjOne = {
   dark: true,
   primary: true,
   darkText: true,
+  bLink: 'contact'
 };
-
 
 export const homeObjTwo = {
   id: 'about',
@@ -32,6 +32,7 @@ export const homeObjTwo = {
   dark: true,
   primary: true,
   darkText: false,
+  bLink: 'contact'
 };
 
 export const homeObjThree = {
@@ -49,5 +50,133 @@ export const homeObjThree = {
   dark: true,
   primary: true,
   darkText: true,
+  bLink: 'contact'
 };
 
+export const homeObjFour = {
+  id: 'compostagem',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Compostagem Acelerada',
+  headline: 'O QUE É COMPOSTAGEM?',
+  description: 'É um processo de reciclagem de resíduos orgânicos que transforma o lixo em adubo natural. Pode ser usado em hortas, jardins e agricultura, contribuindo para a redução do aquecimento global. Benefícios da compostagem: Diminui a quantidade de resíduos enviado aos aterros; Pode ser uma fonte de renda, pois resulta em adubo ecológico, utilizado no cultivo de alimentos orgânicos e Hortas; Ajuda na proteção do solo contra a degradação; Contribui com a melhoria das condições ambientais e da saúde da população;',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: false,
+  img: '/images/time.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: true,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+
+export const homeObjFive = {
+  id: 'gravimetria',
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Gravimetria',
+  headline: 'O QUE É GRAVIMETRIA?',
+  description: 'Na gestão e no gerenciamento de resíduos, a gravimetria desempenha um papel importante colaborando para o diagnóstico do resíduo analisado, ressaltando questões como a origem, o volume e, por fim, a caracterização dos resíduos sólidos. É um método analítico quantitativo clássico que tem por objetivo isolar e realizar a pesagem de um elemento ou composto definido em sua forma mais pura que é separado de uma quantidade ou amostra previamente conhecida. Este método é feito em diversas etapas para garantir a correta quantificação da substância desejada.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: true,
+  img: '/images/svg-4.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: false,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+export const homeObjSix = {
+  id: 'treinamento',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Treinamentos',
+  headline: 'Tipos de Treinamentos',
+  description: 'O treinamento se refere à iniciativas pontuais, de curto prazo, e o desenvolvimento para práticas de longo prazo, visando auxiliar o funcionário no seu crescimento profissional e corporativo. Técnicas de compostagem e redução de desperdícios; Soluções para seus resíduos; Os benefícios da compostagem para o meio ambiente; Compostagem como meio de mitigação nas mudanças climáticas (carbono); Transformar a empresa em lixo zero; O impacto dos GEE no meio ambiente e como sua empresa pode contribuir na redução.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: false,
+  img: '/images/training.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: true,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+export const homeObjSeven = {
+  id: 'ghg',
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'GEE',
+  headline: 'Inventário de Gases de Efeito Estufa - GEE',
+  description: 'Objetivo: levantamento detalhado das emissões de gases que causam o efeito estufa. Esse processo abrange a identificação, quantificação e relato das fontes de emissão, proporcionando uma visão abrangente do impacto ambiental de uma organização. A metodologia utilizada é o GHG Protocol, desenvolvida pelo Word Resouces Institute (WRI) em associação com o World Business Council for Sustainable Development (WBCSD). Por que fazer o inventário? Participar como instituição membro do Programa Brasileiro GHG Protocol Ajudar a cumprir as metas de redução de emissões; Mellhorar a eficiência operacional; Mellhorar a imagem corporativa. O relatório sobre as emissões de gases de efeito estufa marca o início do processo. Entender nossa pegada de carbono abre caminho para práticas mais sustentáveis. Este é o primeiro passo, indicando oportunidades para redução, otimização e inovação em toda a cadeia de valor.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: true,
+  img: '/images/svg-3.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: false,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+
+export const homeObjEight = {
+  id: 'gee',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Gases de Efeito Estufa',
+  headline: 'Gestão de Emissões de Gases de Efeito Estufa',
+  description: 'Objetivo: acompanhar em tempo real as principais fontes de Emissões de Gases de Efeito Estufa (GEE) da empresa (plataforma online), de forma a avaliar e estabelecer estratégias para redução das emissões e combater às mudanças climáticas, alinhadas com as metas previstas de sustentabilidade da organização. A verdadeira gestão das emissões vai além dos números, é um compromisso contínuo de evolução, eficiência e responsabilidade ambiental.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: false,
+  img: '/images/gestao.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: true,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+export const homeObjNine = {
+  id: 'prce',
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Gases de Efeito Estufa',
+  headline: 'Projetos de Redução e/ou Compensação de Emissões',
+  description: 'OBJETIVO da Consultoria: a) auxiliar na construção de estratégias e na implementação de tecnologias voltadas a reduzir emissões de GEE; e b) Identificar e participar de negociações no mercado de carbono é um meio para a empresa melhorar sua performance em emissões, buscando certificações como "net zero" ou "carbon neutral". IMPORTANTE: o projeto pode ser destinado a: empresas; produtos, serviços ou processos específicos; eventos corporativos. Os créditos de carbono podem ser gerados por meio de uma variedade de projetos, incluindo: Reflorestamento: O plantio de árvores captura o dióxido de carbono da atmosfera, ajudando a reduzir as emissões. Eficiência Energética: A instalação de equipamentos e tecnologias mais eficientes ajuda a reduzir o consumo de energia, o que também reduz as emissões. Geração de energia renovável: A substituição de fontes de energia fósseis por fontes renováveis, como energia solar e eólica, também ajuda a reduzir as emissões.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: true,
+  img: '/images/projeto.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: false,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};
+
+export const homeObjTen = {
+  id: 'eventos',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Eventos',
+  headline: 'EVENTO CARBONO NEUTRO',
+  description: 'Um evento neutro em carbono tem suas emissões de Gases de Efeito Estufa (GEE) contabilizadas e neutralizadas. Todas as emissões do evento são compensadas por projetos ambientais que reduzem ou evitam a emissão de GEE.',
+  buttonLabel: 'Solicite orçamento',
+  imgStart: false,
+  img: '/images/Evento.svg',
+  alt: 'Organa',
+  dark: true,
+  primary: true,
+  darkText: true,
+  bLink: "http://orcamento.organabiotech.com.br/orcamento",
+};

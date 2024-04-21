@@ -1,5 +1,7 @@
 
+import Link from 'next/link'
 import { Button } from '../ButtonElements'
+import { NavBtn, NavBtnLink } from '../Navbar/NavbarElements'
 import { InfoContainer, Infowrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './InfoElements'
 
 export function InfoSection({ lightBg, id, imgStart, topLine, lightText, darkText, description, primary, dark, buttonLabel, img, alt, headline }) {
@@ -14,7 +16,7 @@ export function InfoSection({ lightBg, id, imgStart, topLine, lightText, darkTex
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button
+                  {/* <Button
                     primary={primary}
                     dark={dark}
                     smooth={true}
@@ -22,7 +24,12 @@ export function InfoSection({ lightBg, id, imgStart, topLine, lightText, darkTex
                     spy={true}
                     offset={-80}
                     to="contact"
-                  >{buttonLabel}</Button>
+                  >{buttonLabel}</Button> */}
+                  <NavBtn>
+                    <Link href='http://orcamento.organabiotech.com.br/orcamento' passHref>
+                      <NavBtnLink href="/http://orcamento.organabiotech.com.br/orcamento" target="_blank">Solicitar Orçamento</NavBtnLink>
+                    </Link>
+                  </NavBtn>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
