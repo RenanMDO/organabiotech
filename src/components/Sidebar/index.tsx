@@ -46,7 +46,7 @@ export function Sidebar({ isOpen, toggle }) {
           </Link>
         </SidebarMenu>
         <SideBtnWrap>
-          <Link href='/login' passHref>
+          <Link href='/signin' passHref>
             <SidebarRoute onClick={toggle}>
               Entrar Portal
             </SidebarRoute>

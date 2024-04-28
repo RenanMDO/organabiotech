@@ -36,7 +36,7 @@ export function Footer() {
                 <FooterLink href='/blog'>Blog</FooterLink>
               </Link>
               <Link href='/Store' passHref>
-                <FooterLink href='/Store'>Loja</FooterLink>
+                <FooterLink href='/store'>Loja</FooterLink>
               </Link>
               <FooterLinkS to='contact'
                 smooth={true}
@@ -68,7 +68,7 @@ export function Footer() {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo onClick={toggleHome}>
-              <Image src={Logo} width="200" height="66" />
+              <Image src={Logo} alt="Logo Organa Biotech toda em branco" width="200" height="66" />
             </SocialLogo>
             <WebsiteRights>Organa Biotech © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>

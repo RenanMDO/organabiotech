@@ -6,6 +6,10 @@ export default function TermosDeUso() {
     <>
       <Head>
         <title>Organa Biotech | Termos de Uso</title>
+        <meta
+          name="description"
+          content="Leia nossos termos de uso para entender suas obrigações ao utilizar nossos serviços e site."
+        />
       </Head>
       <TextWrapper>
         <TextH1>Esta política de Termos de Uso é válida a partir de Maio 2022.</TextH1>

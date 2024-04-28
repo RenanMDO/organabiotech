@@ -29,6 +29,10 @@ export default function Blog({ posts, totalPages, pageSize, page, totalPosts }: 
     <>
       <Head>
         <title>Blog | Organa Biotech</title>
+        <meta
+          name="description"
+          content="Visita nosso blog para estar informado sobre as notícias e tendências ambientais. De compostagem a dicas climaticas, oferecemos insights valiosos para profissionais e entusiastas ambientais."
+        />
       </Head>
       <BlogMain>
         <BlogDiv>

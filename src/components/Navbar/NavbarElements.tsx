@@ -104,7 +104,11 @@ export const NavLinkR = styled.a`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  
+`
+
+export const SingNavBtn = styled(NavBtn)`
+@media screen and (max-width: 768px) {
     display: none;
   }
 `

@@ -1,6 +1,6 @@
 
 import Link from 'next/link'
-import { Button } from '../ButtonElements'
+// import { Button } from '../ButtonElements'
 import { NavBtn, NavBtnLink } from '../Navbar/NavbarElements'
 import { InfoContainer, Infowrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './InfoElements'
 

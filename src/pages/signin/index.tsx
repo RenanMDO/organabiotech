@@ -6,6 +6,10 @@ export default function Signin() {
     <>
       <Head>
         <title>Portal | Organa Biotech</title>
+        <meta
+          name="description"
+          content="Faça login em sua conta para acessar recursos exclusivos de seus servicoes ambientais. Dashboards, em tempo real de seus projetos."
+        />
       </Head>
       <Container>
         <FormWrap>

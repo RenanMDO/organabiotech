@@ -12,6 +12,10 @@ export default function Solucoes({ }) {
     <>
       <Head>
         <title>Soluções | Organa Biotech</title>
+        <meta
+          name="description"
+          content="Oferecemos diversos serviços ambientais, que vão desde compostagem até inventario de gases de efeito estufa e com a metodologia do GHG Protocol. Saiba como podemos auxiliar sua empresa a atingir suas metas de sustentabilidade."
+        />
       </Head>
       <MarginContainer>
         <InfoSection {...homeObjFour} />

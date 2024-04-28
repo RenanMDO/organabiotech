@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { animateScroll as scroll } from 'react-scroll'
-import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLinks, NavLinkR, NavLogo, NavMenu, ImgLogo } from './NavbarElements'
+import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLinks, NavLinkR, NavLogo, NavMenu, ImgLogo, SingNavBtn } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 
@@ -30,7 +30,7 @@ export function Navbar({ toggle }) {
         <NavbarContainer>
           <Link href='/' passHref>
             <NavLogo>
-              <ImgLogo src='/images/Logo.svg' />
+              <ImgLogo src='/images/Logo.svg' alt='Logo Organa Biotech com 2 tons de verde' />
             </NavLogo>
           </Link>
           <MobileIcon onClick={toggle}>
@@ -73,11 +73,11 @@ export function Navbar({ toggle }) {
               </Link>
             </NavItem>
           </NavMenu>
-          <NavBtn>
+          <SingNavBtn className='singin'>
             <Link href='/signin' passHref>
               <NavBtnLink href="/signin">Entrar Portal</NavBtnLink>
             </Link>
-          </NavBtn>
+          </SingNavBtn>
         </NavbarContainer>
       </Nav>
     </>

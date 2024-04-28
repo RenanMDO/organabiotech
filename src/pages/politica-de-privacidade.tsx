@@ -6,6 +6,10 @@ export default function PoliticaDePrivacidade() {
     <>
       <Head>
         <title>Organa Biotech | Política de Privacidade</title>
+        <meta
+          name="description"
+          content="Nossa política de privacidade. Valorizamos sua privacidade e estamos comprometidos em manter seus dados seguros e protegidos."
+        />
       </Head>
       <TextWrapper>
         <TextH1>Esta política é válida a partir de Maio 2022</TextH1>
