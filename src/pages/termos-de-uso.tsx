@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { TextWrapper, TextH1, TextH2, TextP } from '../components/TextElements'
 
-export default function TermosDeUso() {
+export default function TermoDeUso() {
   return (
     <>
       <Head>
